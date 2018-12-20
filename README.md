@@ -33,3 +33,9 @@ From within the root directory:
 
   npm install -g webpack
   npm install
+
+
+  git branch -b buySell-feature
+
+git checkout buySell
+git branch
