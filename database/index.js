@@ -39,45 +39,10 @@ const News = sequelize.define('news', {
   description: Sequelize.STRING(2000)
 })
 
-About.hasMany(News);
-News.belongsTo(About);
-
 sequelize.sync();
-
-var fakeAbout = () => {
-  for (var i = 0; i < 100; i++) {
-About.create({
-    description: faker.lorem.paragraph(),
-    ceo: faker.name.findName(),
-    employees: faker.random.number(),
-    headquarters: faker.address.city() +', ' + faker.address.state(),
-    founded: faker.random.number(),
-    marketCap: faker.random.number(),
-    priceEarnings: faker.random.number(),
-    dividendYield: faker.random.number(),
-    avgVolume: faker.random.number()
-  })
-  }
-}
-
-fakeAbout();
-
-var fakeNews = () => {
-  for (var i = 0; i < 200; i++) {
-    News.create({
-      pictureUrl: faker.image.imageUrl(),
-      name: faker.company.companyName(),
-      title: faker.lorem.sentence(),
-      views: faker.random.number(),
-      description: faker.lorem.sentences()
-    })
-  }
-}
-
-fakeNews();
-//fake data input to db
-
 
 
 exports.About = About;
 exports.News = News;
+
+

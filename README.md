@@ -19,6 +19,14 @@
 
   Some usage instructions
 
+    -npm run database
+      -creates the database
+    -npm run start
+      -starts your server/creates your table
+    -npm run seed
+      -seeds your database with fake data
+
+
 #Requirements
 
   An nvmrc file is included if using nvm.
@@ -35,7 +43,3 @@ From within the root directory:
   npm install
 
 
-  git branch -b buySell-feature
-
-git checkout buySell
-git branch
