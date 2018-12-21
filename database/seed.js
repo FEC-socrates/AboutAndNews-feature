@@ -1,19 +1,32 @@
 const faker = require('faker');
 const db = require('../database/index.js');
 
+
+var employees = 5500;
+var founded = 1997;
+var marketCap = 113.64;
+var priceEarnings = 88.31
+var avgVolume = 11.31;
+
+
 var fakeAbout = () => {
   for (var i = 0; i < 100; i++) {
     db.About.create({
       description: faker.lorem.paragraph(),
       ceo: faker.name.findName(),
-      employees: faker.random.number(),
+      employees: employees,
       headquarters: faker.address.city() +', ' + faker.address.state(),
-      founded: faker.random.number(),
-      marketCap: faker.random.number(),
-      priceEarnings: faker.random.number(),
-      dividendYield: faker.random.number(),
-      avgVolume: faker.random.number()
+      founded: founded,
+      marketCap: marketCap,
+      priceEarnings: priceEarnings,
+      dividendYield: 0.0,
+      avgVolume: avgVolume
     })
+    employees++;
+    founded++;
+    marketCap++;
+    priceEarnings++;
+    avgVolume++;
   }
 }
 

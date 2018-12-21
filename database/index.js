@@ -25,10 +25,10 @@ const About = sequelize.define('about', {
   employees: Sequelize.INTEGER,
   headquarters: Sequelize.STRING,
   founded: Sequelize.INTEGER,
-  marketCap: Sequelize.INTEGER,
+  marketCap: Sequelize.STRING,
   priceEarnings: Sequelize.INTEGER,
   dividendYield: Sequelize.INTEGER,
-  avgVolume: Sequelize.INTEGER
+  avgVolume: Sequelize.STRING
 })
 
 const News = sequelize.define('news', {
