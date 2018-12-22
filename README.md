@@ -18,7 +18,8 @@
 #Usage
 
   Some usage instructions
-
+    -npm run build
+      -runs your webpack
     -npm run database
       -creates the database
     -npm run start
