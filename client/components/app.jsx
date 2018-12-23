@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import Description from './description.jsx';
+import News from './news.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,9 +30,11 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('staaateee', this.state);
     return (
-      <div>are you here</div>
+      <div>
+        <Description data={this.state.about}/>
+        <News data={this.state.news}/>
+      </div>
     )
   }
 }
