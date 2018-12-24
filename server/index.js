@@ -18,7 +18,7 @@ app.get('/api/about', (req, res) => {
 })
 
 app.get('/api/news', (req, res) => {
-  db.News.findOne()
+  db.News.findAll()
     .then(data => {
       res.status(200);
       res.json(data);

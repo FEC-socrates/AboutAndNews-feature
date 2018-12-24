@@ -29,11 +29,19 @@ class App extends React.Component {
     });
   }
 
+
   render() {
+
+    var items = this.state.news.map((item, index) => {
+      if (item.about_id === this.state.about.id) {
+        return item;
+      }
+    })
+console.log(items,'dsfidhrguh')
     return (
       <div>
         <Description data={this.state.about}/>
-        <News data={this.state.news}/>
+         <News data={items}/>
       </div>
     )
   }

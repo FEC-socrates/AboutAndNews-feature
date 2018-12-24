@@ -6,7 +6,7 @@ const NewsList = (props) => {
   var handleClick = (e) => {
 
   }
-
+console.log(props)
   return (
     <div onClick={handleClick}>
       <div>
@@ -16,7 +16,7 @@ const NewsList = (props) => {
         <div>{props.data.name}</div>
         <div>{props.data.title}</div>
         <div>{props.data.description}</div>
-        <div>{views}</div>
+        <div>{props.data.views}</div>
       </div>
     </div>
   )
