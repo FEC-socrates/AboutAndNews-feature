@@ -2,7 +2,7 @@
   "name": "AboutAndNews",
   "version": "",
   "description": "",
-  "author": "",
+  "author": "Morgan Grace",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
@@ -37,6 +37,11 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0"
   }
 }

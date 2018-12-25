@@ -6,6 +6,7 @@ const NewsList = (props) => {
   var handleClick = (e) => {
 
   }
+
 console.log(props)
   return (
     <div onClick={handleClick}>

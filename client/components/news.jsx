@@ -5,10 +5,10 @@ const News = (props) => {
     <div>
       {props.data.map((item, index) => {
         if (item !== undefined) {
-        return <NewsList data={item} key={index}/>
-      }
+          return <NewsList data={item} key={index} />
+        }
       })
-    }
+      }
     </div>
   )
 }

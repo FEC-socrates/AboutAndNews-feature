@@ -13,21 +13,22 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     axios.get('/api/about')
-    .then(response => {
-      this.setState({
-        about: response.data
+      .then(response => {
+        this.setState({
+          about: response.data
+        });
       });
-    });
 
     axios.get('/api/news')
-    .then(response => {
-      this.setState({
-        news: response.data
+      .then(response => {
+        this.setState({
+          news: response.data
+        });
       });
-    });
   }
+
 
 
   render() {
@@ -37,11 +38,11 @@ class App extends React.Component {
         return item;
       }
     })
-console.log(items,'dsfidhrguh')
+    console.log(items, 'dsfidhrguh')
     return (
       <div>
-        <Description data={this.state.about}/>
-         <News data={items}/>
+        <Description data={this.state.about} />
+        <News data={items} />
       </div>
     )
   }
