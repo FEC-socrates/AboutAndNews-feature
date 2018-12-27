@@ -1,11 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const CeoName = styled.div`
+  color: #21ce99;
+`;
 
 const DescriptionInfoList = (props) => {
   return (
     <div>
         <div>
           <div>CEO</div>
-          <div>{props.data.ceo}</div>
+          <CeoName>{props.data.ceo}</CeoName>
         </div>
         <div>
           <div>Employees</div>
