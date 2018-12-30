@@ -30,3 +30,8 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
+.description, .news, h3 {
+  letter-spacing: 0;
+  line-height: 22px;
+}

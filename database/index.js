@@ -21,6 +21,7 @@ const About = sequelize.define('about', {
     autoIncrement: true
   },
   description: Sequelize.STRING(2000),
+  minimized: Sequelize.STRING(),
   ceo: Sequelize.STRING,
   employees: Sequelize.INTEGER,
   headquarters: Sequelize.STRING,

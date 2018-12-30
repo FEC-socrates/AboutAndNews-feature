@@ -5,39 +5,40 @@ const CeoName = styled.div`
   color: #21ce99;
 `;
 
+
 const DescriptionInfoList = (props) => {
   return (
     <div>
         <div>
-          <div>CEO</div>
+          <h3>CEO</h3>
           <CeoName>{props.data.ceo}</CeoName>
         </div>
         <div>
-          <div>Employees</div>
+          <h3>Employees</h3>
           <div>{props.data.employees}</div>
         </div>
         <div>
-          <div>Headquarters</div>
+          <h3>Headquarters</h3>
           <div>{props.data.headquarters}</div>
         </div>
         <div>
-          <div>Founded</div>
+          <h3>Founded</h3>
           <div>{props.data.founded}</div>
         </div>
         <div>
-          <div>Market Cap</div>
+          <h3>Market Cap</h3>
           <div>{props.data.marketCap}</div>
         </div>
         <div>
-          <div>Price-Earnings Ratio</div>
+          <h3>Price-Earnings Ratio</h3>
           <div>{props.data.priceEarnings}</div>
         </div>
         <div>
-          <div>Dividend Yield</div>
+          <h3>Dividend Yield</h3>
           <div>{props.data.dividendYield}</div>
         </div>
         <div>
-          <div>Average Volume</div>
+          <h3>Average Volume</h3>
           <div>{props.data.avgVolume}</div>
         </div>
     </div>
