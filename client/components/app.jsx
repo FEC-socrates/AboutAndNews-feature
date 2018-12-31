@@ -5,7 +5,7 @@ import News from './news.jsx';
 import styled from 'styled-components';
 
 
-  const Heading = styled.h2 `
+const Heading = styled.h2 `
   font-size: 26px;
   font-weight: 500;
   letter-spacing: -0.14px;
@@ -19,7 +19,7 @@ import styled from 'styled-components';
   color: #f5f5dc;
 `;
 
-const Read = styled.a `
+const Show = styled.a `
   color: #21ce99;
 `
 
@@ -80,17 +80,20 @@ class App extends React.Component {
 
     return (
       <div>
-        <Heading>About</Heading>
+      <div className="aboutShow">
+        <Heading >About</Heading>
+        <Show>Show More</Show>
+        </div>
           <div className="description">
             <div>
               {this.state.open ?
                 <div>
                   {this.state.about.description}
-                  <Read onClick={this.handleClick}> Read Less</Read>
+                  <Show onClick={this.handleClick}> Read Less</Show>
                 </div> :
                 <div>
                   {this.state.minimized}
-                  <Read onClick={this.handleClick}> Read More</Read>
+                  <Show onClick={this.handleClick}> Read More</Show>
                 </div>
               }
               </div>

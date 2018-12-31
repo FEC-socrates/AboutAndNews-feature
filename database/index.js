@@ -27,9 +27,15 @@ const About = sequelize.define('about', {
   headquarters: Sequelize.STRING,
   founded: Sequelize.INTEGER,
   marketCap: Sequelize.STRING,
-  priceEarnings: Sequelize.INTEGER,
+  priceEarnings: Sequelize.STRING,
   dividendYield: Sequelize.INTEGER,
-  avgVolume: Sequelize.STRING
+  avgVolume: Sequelize.STRING,
+  highToday: Sequelize.STRING,
+  lowToday: Sequelize.STRING,
+  openPrice: Sequelize.STRING,
+  volume: Sequelize.STRING,
+  weekHigh: Sequelize.STRING,
+  weekLow: Sequelize.STRING
 })
 
 const News = sequelize.define('news', {

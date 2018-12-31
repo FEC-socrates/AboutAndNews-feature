@@ -35,3 +35,13 @@ html {
   letter-spacing: 0;
   line-height: 22px;
 }
+
+.aboutShow {
+  border-bottom: 1px solid #0e0d0d;
+  padding-bottom: 16px;
+  -webkit-box-align: baseline;
+  align-items: baseline;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}

@@ -6,8 +6,13 @@ var employees = 5500;
 var founded = 1997;
 var marketCap = 113.64;
 var priceEarnings = 88.31
-var avgVolume = 11.31;
-
+var avgVolume = 11.11;
+var highToday = 161.91;
+var lowToday = 120.25;
+var openPrice = 220.94;
+var volume = 2.91;
+var weekHigh = 401.25;
+var weekLow = 166.36;
 
 var fakeAbout = () => {
   for (var i = 0; i < 100; i++) {
@@ -21,13 +26,25 @@ var fakeAbout = () => {
       marketCap: marketCap,
       priceEarnings: priceEarnings,
       dividendYield: 0.0,
-      avgVolume: avgVolume
+      avgVolume: avgVolume,
+      highToday: highToday,
+      lowToday: lowToday,
+      openPrice: openPrice,
+      volume: volume,
+      weekHigh: weekHigh,
+      weekLow: weekLow
     })
     employees++;
     founded++;
     marketCap++;
     priceEarnings++;
     avgVolume++;
+    highToday++;
+    lowToday++;
+    openPrice++;
+    volume++;
+    weekHigh++;
+    weekLow++;
   }
 }
 

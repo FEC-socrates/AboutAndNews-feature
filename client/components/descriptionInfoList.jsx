@@ -7,6 +7,7 @@ const CeoName = styled.div`
 
 
 const DescriptionInfoList = (props) => {
+  console.log(props.data)
   return (
     <div>
         <div>
