@@ -18,7 +18,8 @@
 #Usage
 
   Some usage instructions
-
+    -npm run build
+      -runs your webpack
     -npm run database
       -creates the database
     -npm run start
@@ -30,7 +31,7 @@
 #Requirements
 
   An nvmrc file is included if using nvm.
-  Node 6.13.0
+  Node 10.13.0
   etc
 
 #Development

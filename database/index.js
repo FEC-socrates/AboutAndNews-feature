@@ -1,6 +1,6 @@
 const faker = require('faker');
-var Sequelize = require('sequelize');
-var sequelize = new Sequelize('robinhood', 'root', '', {
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('robinhood', 'root', '', {
   host: 'localhost',
   dialect: 'mysql'
 });
@@ -21,14 +21,21 @@ const About = sequelize.define('about', {
     autoIncrement: true
   },
   description: Sequelize.STRING(2000),
+  minimized: Sequelize.STRING(),
   ceo: Sequelize.STRING,
   employees: Sequelize.INTEGER,
   headquarters: Sequelize.STRING,
   founded: Sequelize.INTEGER,
   marketCap: Sequelize.STRING,
-  priceEarnings: Sequelize.INTEGER,
+  priceEarnings: Sequelize.STRING,
   dividendYield: Sequelize.INTEGER,
-  avgVolume: Sequelize.STRING
+  avgVolume: Sequelize.STRING,
+  highToday: Sequelize.STRING,
+  lowToday: Sequelize.STRING,
+  openPrice: Sequelize.STRING,
+  volume: Sequelize.STRING,
+  weekHigh: Sequelize.STRING,
+  weekLow: Sequelize.STRING
 })
 
 const News = sequelize.define('news', {
@@ -36,10 +43,13 @@ const News = sequelize.define('news', {
   name: Sequelize.STRING,
   title: Sequelize.STRING,
   views: Sequelize.INTEGER,
-  description: Sequelize.STRING(2000)
+  description: Sequelize.STRING(2000),
+  about_id: Sequelize.INTEGER
 })
 
 sequelize.sync();
+
+
 
 
 exports.About = About;
