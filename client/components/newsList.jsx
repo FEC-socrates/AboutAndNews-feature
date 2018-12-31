@@ -1,13 +1,8 @@
 import React from 'react';
 
 const NewsList = (props) => {
-
-
-  var handleClick = (e) => {
-
-  }
   return (
-    <div onClick={handleClick}>
+    <div>
       <div>
         <img src={props.data.pictureUrl} width="200" height="135"/>
       </div>

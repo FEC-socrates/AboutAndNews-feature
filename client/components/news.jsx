@@ -1,5 +1,6 @@
 import React from 'react';
 import NewsList from './newsList.jsx'
+
 const News = (props) => {
   return (
     <div className="news">
@@ -8,8 +9,7 @@ const News = (props) => {
           if (item !== undefined) {
             return <NewsList data={item} key={index} />
           }
-        })
-        }
+        })}
       </div>
     </div>
   )

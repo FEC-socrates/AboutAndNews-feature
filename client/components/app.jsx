@@ -59,10 +59,6 @@ class App extends React.Component {
     console.log(this.state)
   }
 
-  // handleSubmit() {
-  //   axios.put('/api/news')
-  // }
-
   handleClick() {
     this.setState({
       open: !this.state.open
@@ -109,4 +105,3 @@ class App extends React.Component {
 }
 
 export default App;
-

@@ -54,5 +54,3 @@ sequelize.sync();
 
 exports.About = About;
 exports.News = News;
-
-
