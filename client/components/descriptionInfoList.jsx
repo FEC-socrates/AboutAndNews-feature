@@ -7,7 +7,6 @@ const CeoName = styled.div`
 
 
 const DescriptionInfoList = (props) => {
-console.log(props)
   return (
     <div>
     {props.open === false ?
@@ -79,32 +78,28 @@ console.log(props)
             <div>{props.data.avgVolume}</div>
           </div>
           <div>
-            <h3>Average Volume</h3>
-            <div>{props.data.avgVolume}</div>
+            <h3>High Today</h3>
+            <div>{props.data.highToday}</div>
           </div>
           <div>
-            <h3>Average Volume</h3>
-            <div>{props.data.avgVolume}</div>
+            <h3>Low Today</h3>
+            <div>{props.data.lowToday}</div>
           </div>
           <div>
-            <h3>Average Volume</h3>
-            <div>{props.data.avgVolume}</div>
+            <h3>Open Price</h3>
+            <div>{props.data.openPrice}</div>
           </div>
           <div>
-            <h3>Average Volume</h3>
-            <div>{props.data.avgVolume}</div>
+            <h3>Volume</h3>
+            <div>{props.data.volume}</div>
           </div>
           <div>
-            <h3>Average Volume</h3>
-            <div>{props.data.avgVolume}</div>
+            <h3>52 Week High</h3>
+            <div>{props.data.weekHigh}</div>
           </div>
           <div>
-            <h3>Average Volume</h3>
-            <div>{props.data.avgVolume}</div>
-          </div>
-          <div>
-            <h3>Average Volume</h3>
-            <div>{props.data.avgVolume}</div>
+            <h3>52 Week Low</h3>
+            <div>{props.data.weekLow}</div>
           </div>
         </div>
       }
