@@ -64,6 +64,7 @@ const NewsList = (props) => {
       >
         <Name>{props.data.name}</Name>
         <strong><Title>{props.data.title}</Title></strong>
+        <div>{props.data.hour}</div>
         <Desc>{props.data.description}</Desc>
         <img src={eye}/><View>{props.data.views}</View>
       </div>
