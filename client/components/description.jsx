@@ -1,36 +1,78 @@
-// import React from 'react';
-// import DescriptionInfoList from './descriptionInfoList.jsx';
-// import styled from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
+import DescriptionInfoList from './descriptionInfoList.jsx';
+import axios from 'axios';
 
-// const About = styled.h2`
-//   font-size: 26px;
-//   font-weight: 500;
-//   letter-spacing: -0.14px;
-//   line-height: 30px;
-//   margin: 0;
-//   display: block;
-//   margin-block-start: 0.83em;
-//   margin-block-end: 0.83em;
-//   margin-inline-start: 0px;
-//   margin-inline-end: 0px;
-//   color: #f5f5dc;
-// `;
+const Show = styled.a `
+  color: #21ce99;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  line-height: 19px;
+  margin: 0;
+`;
 
 
-// const Description = (props) => {
-//   return (
-//     <div>
-//     <About>About</About>
-//       <div className="description">
-//         <div>
-//           {props.data.description}
-//         </div>
-//         <section>
-//           <DescriptionInfoList data={props.data}/>
-//         </section>
-//       </div>
-//     </div>
-//   )
-// }
+class Description extends React.Component {
+  constructor(props) {
+    super(props);
 
-// export default Description;
+    this.state = {
+      about: [],
+      minimized: '',
+      maximized: '',
+      open: false,
+      openInfo: false
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount(){
+     axios.get('/api/about')
+      .then({data} => {
+        var split = response.data.description.split('.');
+        var min = split[0] + '. ' + split[1] + '.'
+        this.setState({
+          about: data,
+          minimized: min
+        });
+      });
+  }
+
+  handleClick() {
+    this.setState({
+      open: !this.state.open
+    });
+  }
+
+
+  render() {
+    return (
+      <div>
+        <div>
+          {this.state.open ?
+            <div>
+            <div className="about">
+              {this.state.about.description}
+              <Show onClick={this.handleClick}> Read Less</Show>
+              </div>
+            </div>  :
+            <div>
+            <div className="about">
+              {this.state.minimized}
+              <Show onClick={this.handleClick}> Read More</Show>
+              </div>
+            </div>
+          }
+        </div>
+          <DescriptionInfoList
+          open={this.props.open}
+          handleClick={this.handleInfoClick}
+          data={this.state.about}
+          />
+      </div>
+    )
+  }
+}
+
+export default Description;

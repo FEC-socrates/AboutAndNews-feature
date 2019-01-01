@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import DescriptionInfoList from './descriptionInfoList.jsx';
 import News from './news.jsx';
 import styled from 'styled-components';
+import Description from './description.jsx';
 
 
 const Heading = styled.h2 `
@@ -28,42 +28,13 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      about: [],
-      news: [],
-      minimized: '',
-      maximized: '',
-      open: false
+      open: false,
+      clicked: false
     }
-
-    this.handleClick = this.handleClick.bind(this);
+    this.handleInfoClick = this.handleInfoClick.bind(this);
   }
 
-  componentDidMount() {
-    axios.get('/api/about')
-      .then(response => {
-        console.log(response.data)
-        var split = response.data.description.split('.');
-        var min = split[0] + '. ' + split[1] + '.'
-        this.setState({
-          about: response.data,
-          minimized: min
-        });
-      });
-
-    axios.get('/api/news')
-      .then(response => {
-        this.setState({
-          news: response.data
-        });
-      });
-    console.log(this.state)
-  }
-
-  // handleSubmit() {
-  //   axios.put('/api/news')
-  // }
-
-  handleClick() {
+  handleInfoClick() {
     this.setState({
       open: !this.state.open
     });
@@ -71,37 +42,20 @@ class App extends React.Component {
 
 
   render() {
-  console.log(this.state)
-    var items = this.state.news.map((item, index) => {
-      if (item.about_id === this.state.about.id) {
-        return item;
-      }
-    })
-
     return (
       <div>
       <div className="aboutShow">
         <Heading >About</Heading>
-        <Show>Show More</Show>
+          {this.state.open ?
+            <Show onClick={this.handleInfoClick}>Show Less</Show> :
+            <Show onClick={this.handleInfoClick}>Show More</Show> }
         </div>
           <div className="description">
-            <div>
-              {this.state.open ?
-                <div>
-                  {this.state.about.description}
-                  <Show onClick={this.handleClick}> Read Less</Show>
-                </div> :
-                <div>
-                  {this.state.minimized}
-                  <Show onClick={this.handleClick}> Read More</Show>
-                </div>
-              }
-              </div>
-            <DescriptionInfoList data={this.state.about} />
+            <Description open={this.state.open}/>
           </div>
         <Heading>News</Heading>
           <div className="news">
-            <News data={items} />
+            <News />
           </div>
       </div>
     )
@@ -109,4 +63,3 @@ class App extends React.Component {
 }
 
 export default App;
-

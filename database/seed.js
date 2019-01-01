@@ -55,7 +55,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 1
   },
   {
@@ -63,7 +63,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 1
   },
   {
@@ -71,7 +71,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 1
   },
   {
@@ -79,7 +79,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 1
   },
   {
@@ -87,7 +87,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 1
   },
   {
@@ -95,7 +95,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 2
   },
   {
@@ -103,7 +103,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 2
   },
   {
@@ -111,7 +111,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 2
   },
   {
@@ -119,7 +119,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 4
   },
   {
@@ -127,7 +127,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 4
   }
   ,
@@ -136,7 +136,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 5
   },
   {
@@ -144,7 +144,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 5
   },
   {
@@ -152,7 +152,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 5
   },
   {
@@ -160,7 +160,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 5
   },
   {
@@ -168,7 +168,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 6
   },
   {
@@ -176,7 +176,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 7
   },
   {
@@ -184,7 +184,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 7
   },
   {
@@ -192,7 +192,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 7
   },
   {
@@ -200,7 +200,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 7
   },
   {
@@ -208,7 +208,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 7
   },
   {
@@ -216,7 +216,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 7
   },
   {
@@ -224,7 +224,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 8
   },
   {
@@ -232,7 +232,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 8
   },
   {
@@ -240,7 +240,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 8
   },
   {
@@ -248,7 +248,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 9
   },
   {
@@ -256,7 +256,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 9
   },
   {
@@ -264,7 +264,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 10
   },
   {
@@ -272,7 +272,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 10
   },
   {
@@ -280,7 +280,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 10
   },
   {
@@ -288,7 +288,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 10
   },
   {
@@ -296,7 +296,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 10
   },
   {
@@ -304,7 +304,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 10
   },
   {
@@ -312,7 +312,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 12
   },
   {
@@ -320,7 +320,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 12
   },
   {
@@ -328,7 +328,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 12
   },
   {
@@ -336,7 +336,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 13
   },
   {
@@ -344,7 +344,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 13
   },
   {
@@ -352,7 +352,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 14
   },
   {
@@ -360,7 +360,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 14
   },
   {
@@ -368,7 +368,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 15
   },
   {
@@ -376,7 +376,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 15
   },
   {
@@ -384,7 +384,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 15
   },
   {
@@ -392,7 +392,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 15
   },
   {
@@ -400,7 +400,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 16
   },
   {
@@ -408,7 +408,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 100
   },
   {
@@ -416,7 +416,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 16
   },
   {
@@ -424,7 +424,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 99
   },
   {
@@ -432,7 +432,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 99
   },
   {
@@ -440,7 +440,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 17
   },
   {
@@ -448,7 +448,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 17
   },
   {
@@ -456,7 +456,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 17
   },
   {
@@ -464,7 +464,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 18
   },
   {
@@ -472,7 +472,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 98
   },
   {
@@ -480,7 +480,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 98
   },
   {
@@ -488,7 +488,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 18
   },
   {
@@ -496,7 +496,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 97
   },
   {
@@ -504,7 +504,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 97
   },
   {
@@ -512,7 +512,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 19
   },
   {
@@ -520,7 +520,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 19
   },
   {
@@ -528,7 +528,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 19
   },
   {
@@ -536,7 +536,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 19
   },
   {
@@ -544,7 +544,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 96
   },
   {
@@ -552,7 +552,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 96
   },
   {
@@ -560,7 +560,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 20
   },
   {
@@ -568,7 +568,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 20
   },
   {
@@ -576,7 +576,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 21
   },
   {
@@ -584,7 +584,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 21
   },
   {
@@ -592,7 +592,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 21
   },
   {
@@ -600,7 +600,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 22
   },
   {
@@ -608,7 +608,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 24
   },
   {
@@ -616,7 +616,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 24
   },
   {
@@ -624,7 +624,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 24
   },
   {
@@ -632,7 +632,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 25
   },
   {
@@ -640,7 +640,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 25
   },
   {
@@ -648,7 +648,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 25
   },
   {
@@ -656,7 +656,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 26
   },
   {
@@ -664,7 +664,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 26
   },
   {
@@ -672,7 +672,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 26
   },
   {
@@ -680,7 +680,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 27
   },
   {
@@ -688,7 +688,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 27
   },
   {
@@ -696,7 +696,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 27
   },
   {
@@ -704,7 +704,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 28
   },
   {
@@ -712,7 +712,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 28
   },
   {
@@ -720,7 +720,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 28
   },
   {
@@ -728,7 +728,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 29
   },
   {
@@ -736,7 +736,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 29
   },
   {
@@ -744,7 +744,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 95
   },
   {
@@ -752,7 +752,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 95
   },
   {
@@ -760,7 +760,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 30
   },
   {
@@ -768,7 +768,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 30
   },
   {
@@ -776,7 +776,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 30
   },
   {
@@ -784,7 +784,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 93
   },
   {
@@ -792,7 +792,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 93
   },
   {
@@ -800,7 +800,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 31
   },
   {
@@ -808,7 +808,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 31
   },
   {
@@ -816,7 +816,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 32
   },
   {
@@ -824,7 +824,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 32
   },
   {
@@ -832,7 +832,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 32
   },
   {
@@ -840,7 +840,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 33
   },
   {
@@ -848,7 +848,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 33
   },
   {
@@ -856,7 +856,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 92
   },
   {
@@ -864,7 +864,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 34
   },
   {
@@ -872,7 +872,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 34
   },
   {
@@ -880,7 +880,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 92
   },
   {
@@ -888,7 +888,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 92
   },
   {
@@ -896,7 +896,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 35
   },
   {
@@ -904,7 +904,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 90
   },
   {
@@ -912,7 +912,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 90
   },
   {
@@ -920,7 +920,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 35
   },
   {
@@ -928,7 +928,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 35
   },
   {
@@ -936,7 +936,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 89
   },
   {
@@ -944,7 +944,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 89
   },
   {
@@ -952,7 +952,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 36
   },
   {
@@ -960,7 +960,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 36
   },
   {
@@ -968,7 +968,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 37
   },
   {
@@ -976,7 +976,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 38
   },
   {
@@ -984,7 +984,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 39
   },
   {
@@ -992,7 +992,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 39
   },
   {
@@ -1000,7 +1000,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 39
   },
   {
@@ -1008,7 +1008,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 87
   },
   {
@@ -1016,7 +1016,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 40
   },
   {
@@ -1024,7 +1024,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 40
   },
   {
@@ -1032,7 +1032,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 86
   },
   {
@@ -1040,7 +1040,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 86
   },
   {
@@ -1048,7 +1048,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 41
   },
   {
@@ -1056,7 +1056,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 42
   },
   {
@@ -1064,7 +1064,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 42
   },
   {
@@ -1072,7 +1072,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 85
   },
   {
@@ -1080,7 +1080,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 85
   },
   {
@@ -1088,7 +1088,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 43
   },
   {
@@ -1096,7 +1096,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 43
   },
   {
@@ -1104,7 +1104,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 44
   },
   {
@@ -1112,7 +1112,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 44
   },
   {
@@ -1120,7 +1120,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 45
   },
   {
@@ -1128,7 +1128,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 46
   },
   {
@@ -1136,7 +1136,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 46
   },
   {
@@ -1144,7 +1144,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 46
   },
   {
@@ -1152,7 +1152,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 47
   },
   {
@@ -1160,7 +1160,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 47
   },
   {
@@ -1168,7 +1168,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 48
   },
   {
@@ -1176,7 +1176,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 48
   },
   {
@@ -1184,7 +1184,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 48
   },
   {
@@ -1192,7 +1192,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 84
   },
   {
@@ -1200,7 +1200,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 84
   },
   {
@@ -1208,7 +1208,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 49
   },
   {
@@ -1216,7 +1216,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 49
   },
   {
@@ -1224,7 +1224,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 83
   },
   {
@@ -1232,7 +1232,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 83
   },
   {
@@ -1240,7 +1240,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 50
   },
   {
@@ -1248,7 +1248,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 50
   },
   {
@@ -1256,7 +1256,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 50
   },
   {
@@ -1264,7 +1264,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 51
   },
   {
@@ -1272,7 +1272,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 51
   },
   {
@@ -1280,7 +1280,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 81
   },
   {
@@ -1288,7 +1288,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 81
   },
   {
@@ -1296,7 +1296,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 81
   },
   {
@@ -1304,7 +1304,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 82
   },
   {
@@ -1312,7 +1312,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 81
   },
   {
@@ -1320,7 +1320,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 52
   },
   {
@@ -1328,7 +1328,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 52
   },
   {
@@ -1336,7 +1336,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 53
   },
   {
@@ -1344,7 +1344,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 53
   },
   {
@@ -1352,7 +1352,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 53
   },
   {
@@ -1360,7 +1360,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 53
   },
   {
@@ -1368,7 +1368,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 54
   },
   {
@@ -1376,7 +1376,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 55
   },
   {
@@ -1384,7 +1384,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 56
   },
   {
@@ -1392,7 +1392,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 57
   },
   {
@@ -1400,7 +1400,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 57
   },
   {
@@ -1408,7 +1408,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 58
   },
   {
@@ -1416,7 +1416,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 58
   },
   {
@@ -1424,7 +1424,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 58
   },
   {
@@ -1432,7 +1432,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 59
   },
   {
@@ -1440,7 +1440,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 59
   },
   {
@@ -1448,7 +1448,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 60
   },
   {
@@ -1456,7 +1456,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 60
   },
   {
@@ -1464,7 +1464,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 60
   },
   {
@@ -1472,7 +1472,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 61
   },
   {
@@ -1480,7 +1480,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 62
   },
   {
@@ -1488,7 +1488,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 62
   },
   {
@@ -1496,7 +1496,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 63
   },
   {
@@ -1504,7 +1504,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 64
   },
   {
@@ -1512,7 +1512,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 65
   },
   {
@@ -1520,7 +1520,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 67
   },
   {
@@ -1528,7 +1528,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 69
   },
   {
@@ -1536,7 +1536,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 69
   },
   {
@@ -1544,7 +1544,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 69
   },
   {
@@ -1552,7 +1552,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 71
   },
   {
@@ -1560,7 +1560,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 72
   },
   {
@@ -1568,7 +1568,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 74
   },
   {
@@ -1576,7 +1576,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 75
   },
   {
@@ -1584,7 +1584,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 75
   },
   {
@@ -1592,7 +1592,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 75
   },
   {
@@ -1600,7 +1600,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 76
   },
   {
@@ -1608,7 +1608,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 76
   },
   {
@@ -1616,7 +1616,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 76
   },
   {
@@ -1624,7 +1624,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 77
   },
   {
@@ -1632,7 +1632,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 78
   },
   {
@@ -1640,7 +1640,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 79
   },
   {
@@ -1648,7 +1648,7 @@ db.News.bulkCreate([
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
-    description: faker.lorem.sentences(),
+    description: faker.lorem.sentence(),
     about_id: 80
   }
 ])
