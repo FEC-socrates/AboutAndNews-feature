@@ -4,8 +4,7 @@ const port = 8080;
 const db = require('../database/index.js');
 const bodyParser = require('body-parser');
 const path = require('path');
-// const faker = require('faker');
-// console.log(db)
+
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, '../public')))

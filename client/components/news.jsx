@@ -54,13 +54,11 @@ class News extends React.Component {
     this.setState({
       hover: true
     })
-    console.log('did it again')
   }
   handleHover2() {
     this.setState({
       hover: false
     })
-    console.log('did it')
   }
 
   render() {
