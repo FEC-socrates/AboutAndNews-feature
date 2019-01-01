@@ -5,7 +5,12 @@ import axios from 'axios';
 
 const Show = styled.a `
   color: #21ce99;
-`
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  line-height: 19px;
+  margin: 0;
+`;
 
 
 class Description extends React.Component {
@@ -48,12 +53,16 @@ class Description extends React.Component {
         <div>
           {this.state.open ?
             <div>
+            <div className="about">
               {this.state.about.description}
               <Show onClick={this.handleClick}> Read Less</Show>
+              </div>
             </div> :
             <div>
+            <div className="about">
               {this.state.minimized}
               <Show onClick={this.handleClick}> Read More</Show>
+              </div>
             </div>
           }
         </div>

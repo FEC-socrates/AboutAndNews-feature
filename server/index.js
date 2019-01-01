@@ -6,8 +6,9 @@ const bodyParser = require('body-parser');
 const path = require('path');
 // const faker = require('faker');
 // console.log(db)
-app.use(express.static(path.join(__dirname, '../public')))
+app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, '../public')))
 
 app.get('/api/about', (req, res) => {
   db.About.findOne()
@@ -24,6 +25,20 @@ app.get('/api/news', (req, res) => {
       res.json(data);
     })
 })
+
+app.put('/save', (req, res) => {
+  db.News.update(
+    { views: req.body.views }, {
+    where: {
+      title: req.body.title
+    }
+  })
+  .then(response => {
+    res.status(200);
+    res.json(response);
+  })
+})
+
 
 app.listen(port, () => console.log(`listening on port ${port}!`))
 

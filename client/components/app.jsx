@@ -28,27 +28,10 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      news: [],
-      about: [],
-      open: false
+      open: false,
+      clicked: false
     }
     this.handleInfoClick = this.handleInfoClick.bind(this);
-  }
-
-  componentDidMount() {
-    axios.get('/api/news')
-      .then(response => {
-        this.setState({
-          news: response.data
-        });
-      });
-
-    axios.get('/api/about')
-      .then(response => {
-        this.setState({
-          about: response.data
-        });
-      });
   }
 
   handleInfoClick() {
@@ -57,14 +40,8 @@ class App extends React.Component {
     });
   }
 
+
   render() {
-    var items = this.state.news.map((item, index) => {
-      if (item.about_id === this.state.about.id) {
-        return item;
-      }
-    })
-
-
     return (
       <div>
       <div className="aboutShow">
@@ -78,7 +55,7 @@ class App extends React.Component {
           </div>
         <Heading>News</Heading>
           <div className="news">
-            <News data={items} />
+            <News />
           </div>
       </div>
     )
