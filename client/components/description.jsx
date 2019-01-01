@@ -57,7 +57,7 @@ class Description extends React.Component {
               {this.state.about.description}
               <Show onClick={this.handleClick}> Read Less</Show>
               </div>
-            </div> :
+            </div>  :
             <div>
             <div className="about">
               {this.state.minimized}

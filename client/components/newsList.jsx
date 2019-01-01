@@ -28,13 +28,22 @@ const Name = styled.div`
 const View = styled.span`
   margin-top: auto;
   padding: 10px;
+
+`;
+
+const Hover = styled.div`
+  background-color: #171718;
 `;
 
 
 
 const NewsList = (props) => {
   return (
-    <div className="media">
+    <div>
+    {props.hover === false ?
+    <div className="media"
+      onMouseEnter={props.handleHover1}
+      onMouseLeave={props.handleHover2}>
       <div className="image">
         <img src={props.data.pictureUrl} width="200" height="135"/>
       </div>
@@ -44,6 +53,22 @@ const NewsList = (props) => {
         <Desc>{props.data.description}</Desc>
         <img src={eye}/><View>{props.data.views}</View>
       </div>
+    </div> :
+    <Hover className="media">
+      <div className="image">
+        <img src={props.data.pictureUrl} width="200" height="135"/>
+      </div>
+      <div className="content"
+        onMouseEnter={props.handleHover1}
+        onMouseLeave={props.handleHover2}
+      >
+        <Name>{props.data.name}</Name>
+        <strong><Title>{props.data.title}</Title></strong>
+        <Desc>{props.data.description}</Desc>
+        <img src={eye}/><View>{props.data.views}</View>
+      </div>
+    </Hover>
+    }
     </div>
   )
 }

@@ -1,17 +1,21 @@
 import React from 'react';
 import NewsList from './newsList.jsx';
 import axios from 'axios';
+
+
 class News extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       news: [],
-      about: []
+      about: [],
+      hover: false
     }
 
     this.handleNewsClick = this.handleNewsClick.bind(this);
-
+    this.handleHover1 = this.handleHover1.bind(this);
+    this.handleHover2 = this.handleHover2.bind(this);
   }
 
   componentDidMount() {
@@ -46,6 +50,19 @@ class News extends React.Component {
     });
   }
 
+  handleHover1() {
+    this.setState({
+      hover: true
+    })
+    console.log('did it again')
+  }
+  handleHover2() {
+    this.setState({
+      hover: false
+    })
+    console.log('did it')
+  }
+
   render() {
     var items = this.state.news.map((item, index) => {
       if (item.about_id === this.state.about.id) {
@@ -53,11 +70,15 @@ class News extends React.Component {
       }
     })
     return (
-      <div className="news" onClick={this.handleNewsClick}>
+      <div className="news"
+        onClick={this.handleNewsClick}
+      >
         <div>
           {items.map((item, index) => {
             if (item !== undefined) {
-              return <NewsList data={item} key={index} />
+              return <NewsList data={item} key={index}  handleHover1={this.handleHover1}
+                handleHover2={this.handleHover2}
+                hover={this.state.hover}/>
             }
           })}
         </div>

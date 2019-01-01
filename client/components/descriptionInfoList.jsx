@@ -13,7 +13,7 @@ const DescriptionInfoList = (props) => {
       <div className="info">
           <div className="infoItem">
             <h3>CEO</h3>
-            <CeoName>{props.data.ceo}</CeoName>
+            <CeoName onClick={() => (console.log('clicked'))}>{props.data.ceo}</CeoName>
           </div>
           <div className="infoItem">
             <h3>Employees</h3>
