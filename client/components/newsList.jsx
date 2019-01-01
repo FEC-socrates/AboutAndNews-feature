@@ -35,6 +35,12 @@ const Hover = styled.div`
   background-color: #171718;
 `;
 
+const Flex = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
 
 
 const NewsList = (props) => {
@@ -48,7 +54,10 @@ const NewsList = (props) => {
         <img src={props.data.pictureUrl} width="200" height="135"/>
       </div>
       <div className="content">
+      <Flex>
         <Name>{props.data.name}</Name>
+        <div>{props.data.hour}</div>
+      </Flex>
         <strong><Title>{props.data.title}</Title></strong>
         <Desc>{props.data.description}</Desc>
         <img src={eye}/><View>{props.data.views}</View>
@@ -62,7 +71,10 @@ const NewsList = (props) => {
         onMouseEnter={props.handleHover1}
         onMouseLeave={props.handleHover2}
       >
+      <Flex>
         <Name>{props.data.name}</Name>
+        <div>{props.data.hour}</div>
+      </Flex>
         <strong><Title>{props.data.title}</Title></strong>
         <Desc>{props.data.description}</Desc>
         <img src={eye}/><View>{props.data.views}</View>

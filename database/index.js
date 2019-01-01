@@ -44,7 +44,8 @@ const News = sequelize.define('news', {
   title: Sequelize.STRING,
   views: Sequelize.INTEGER,
   description: Sequelize.STRING(2000),
-  about_id: Sequelize.INTEGER
+  about_id: Sequelize.INTEGER,
+  hour: Sequelize.STRING
 })
 
 sequelize.sync();
