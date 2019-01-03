@@ -2,6 +2,7 @@ import Enzyme, { shallow, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import App from '../client/components/app.jsx';
 import React from 'react';
+import { handleInfoClick } from './jestsetup.js'
 
 
 describe('app tests', () => {
@@ -9,7 +10,7 @@ describe('app tests', () => {
   const wrapper = mount(<App />);
 
   it('should render a <div />', () => {
-    expect(wrapper.find('div').length).toEqual(8);
+    expect(wrapper.find('div').length).toEqual(28);
   });
 
   it('should render a classname about', () => {
@@ -17,11 +18,11 @@ describe('app tests', () => {
   });
 
   it('should render a show more button', () => {
-    expect(wrapper.find(<a onClick={this.handleInfoClick}>Show Less</a>))
+    expect(wrapper.find(<a onClick={handleInfoClick}>Show Less</a>))
   })
 
   it('should render read more', () => {
-    expect(wrapper.find('.aboutShow').text()).toEqual(' Show More')
+    expect(wrapper.find('.aboutShow').text()).toEqual('AboutShow More')
   })
 
 
@@ -30,7 +31,7 @@ describe('app tests', () => {
       open: true
     })
     expect(wrapper.find(
-     <a onClick={this.handleInfoClick}>Show Less</a>))
+     <a onClick={handleInfoClick}>Show Less</a>))
   })
 
 
@@ -39,7 +40,7 @@ describe('app tests', () => {
       open: true
     })
 
-    expect(wrapper.find('.aboutShow').text()).toEqual(' Show Less')
+    expect(wrapper.find('.aboutShow').text()).toEqual('AboutShow Less')
   })
 
 });

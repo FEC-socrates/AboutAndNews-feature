@@ -39,10 +39,47 @@ const fakeDescriptionData ={
   weekLow: "168.36"
 }
 
+//about functions
+
 const handleClick = () => {
   this.setState({
     open: !this.state.open
   });
 }
 
-export { fakeNewsData, fakeDescriptionData, handleClick };
+ const handleInfoClick = () => {
+    this.setState({
+      open: !this.state.open
+    });
+  }
+
+//news functions
+
+ const handleNewsClick = (e) => {
+    var newNews = this.state.news;
+    for (var i = 0; i < newNews.length; i++) {
+      if(e.target.innerHTML === newNews[i].title || e.target.innerHTML === newNews[i].name || e.target.innerHTML === newNews[i].description) {
+        newNews[i].views = Number(newNews[i].views) + 1;
+        axios.put("/save", newNews[i])
+          .then(response => {
+            console.log('saved succesfully');
+          });
+        }
+      }
+    this.setState({
+      news: newNews
+    });
+  }
+
+ const handleHover1 = () => {
+    this.setState({
+      hover: true
+    })
+  }
+ const handleHover2 = () => {
+    this.setState({
+      hover: false
+    })
+  }
+
+export { fakeNewsData, fakeDescriptionData, handleClick, handleInfoClick, handleNewsClick, handleHover1, handleHover2};
