@@ -3,19 +3,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import Description from '../client/components/description.jsx';
 import { fakeDescriptionData, handleClick } from './jestsetup.js'
 import React from 'react';
-import DescriptionInfoList from '../client/components/descriptionInfoList.jsx';
-import styled from 'styled-components';
 
-
- // var body = document.createElement('body');
- //  document.body = body;
- //  var div = document.createElement('div');
- //  div.id = 'app'
- //  document.body.appendChild(div);
-
- //  // Mount React components
- //  ReactDOM.render(<Description/>, document.getElementById('app'));
- //  var Description = mount(<Description/>);
 
 
 describe('description tests', () => {
