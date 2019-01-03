@@ -21,8 +21,7 @@ class Description extends React.Component {
       about: [],
       minimized: '',
       maximized: '',
-      open: false,
-      openInfo: false
+      open: false
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -46,7 +45,9 @@ class Description extends React.Component {
   }
 
 
+
   render() {
+    console.log(this.state.about)
     return (
       <div>
         <div>
