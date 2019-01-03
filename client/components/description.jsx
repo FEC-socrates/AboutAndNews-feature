@@ -21,8 +21,7 @@ class Description extends React.Component {
       about: [],
       minimized: '',
       maximized: '',
-      open: false,
-      openInfo: false
+      open: false
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -30,7 +29,7 @@ class Description extends React.Component {
   componentDidMount(){
      axios.get('/api/about')
       .then(({data}) => {
-        var split = response.data.description.split('.');
+        var split = data.description.split('.');
         var min = split[0] + '. ' + split[1] + '.'
         this.setState({
           about: data,
@@ -46,7 +45,9 @@ class Description extends React.Component {
   }
 
 
+
   render() {
+    console.log(this.state.about)
     return (
       <div>
         <div>
