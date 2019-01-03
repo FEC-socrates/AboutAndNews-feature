@@ -29,9 +29,30 @@ class App extends React.Component {
 
     this.state = {
       open: false,
-      clicked: false
+      clicked: false,
+      about: [],
+      minimized: ''
     }
     this.handleInfoClick = this.handleInfoClick.bind(this);
+    this.getRandomNumber = this.getRandomNumber.bind(this);
+  }
+
+  componentDidMount(){
+    let id = parseInt(window.location.pathname.slice(1, window.location.pathname.length-1))
+    if (isNaN(id)) {
+      id = this.getRandomNumber(1, 100);
+    }
+
+     axios
+     .get(`/api/about:${id}`)
+      .then(response => {
+        var split = response.data.description.split('.');
+        var min = split[0] + '. ' + split[1] + '.';
+        this.setState({
+          about: response.data,
+          minimized: min
+        });
+      });
   }
 
   handleInfoClick() {
@@ -40,6 +61,12 @@ class App extends React.Component {
     });
   }
 
+
+  getRandomNumber(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
   render() {
     return (
@@ -51,11 +78,11 @@ class App extends React.Component {
             <Show onClick={this.handleInfoClick}>Show More</Show> }
         </div>
           <div className="description">
-            <Description open={this.state.open}/>
+            <Description about={this.state.about} minimized={this.state.minimized} open={this.state.open}/>
           </div>
         <Heading>News</Heading>
           <div className="news">
-            <News />
+            <News about={this.state.about}/>
           </div>
       </div>
     )
