@@ -45,4 +45,10 @@ const handleClick = () => {
   });
 }
 
-export { fakeNewsData, fakeDescriptionData, handleClick };
+ const handleInfoClick = () => {
+    this.setState({
+      open: !this.state.open
+    });
+  }
+
+export { fakeNewsData, fakeDescriptionData, handleClick, handleInfoClick };
