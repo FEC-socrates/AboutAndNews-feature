@@ -44,6 +44,7 @@ const Flex = styled.div`
 
 
 const NewsList = (props) => {
+
   return (
     <div>
     {props.hover === false ?

@@ -9,8 +9,8 @@ class News extends React.Component {
 
     this.state = {
       news: [],
-      about: [],
-      hover: false
+      hover: false,
+      about_id: 1
     }
 
     this.handleNewsClick = this.handleNewsClick.bind(this);
@@ -19,17 +19,11 @@ class News extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/news')
+    axios.get(`/api/news`)
       .then(response => {
+        console.log(response.data)
         this.setState({
           news: response.data
-        });
-      });
-
-    axios.get('/api/about')
-      .then(response => {
-        this.setState({
-          about: response.data
         });
       });
   }
@@ -62,22 +56,29 @@ class News extends React.Component {
   }
 
   render() {
+    console.log(this.props.about.id)
+
     var items = this.state.news.map((item, index) => {
-      if (item.about_id === this.state.about.id) {
+      if (item.about_id === this.props.about.id) {
         return item;
       }
     })
+    var items2 = []
+    for (var i = 0; i< items.length; i++) {
+      if (items[i] !== undefined) {
+        items2.push(items[i]);
+      }
+    }
+
     return (
       <div className="news"
         onClick={this.handleNewsClick}
       >
         <div>
-          {items.map((item, index) => {
-            if (item !== undefined) {
-              return <NewsList data={item} key={index}  handleHover1={this.handleHover1}
-                handleHover2={this.handleHover2}
-                hover={this.state.hover}/>
-            }
+          {items2.map((item, index) => {
+            return <NewsList data={item} key={index}  handleHover1={this.handleHover1}
+              handleHover2={this.handleHover2}
+              hover={this.state.hover}/>
           })}
         </div>
       </div>
