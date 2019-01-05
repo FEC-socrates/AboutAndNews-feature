@@ -1,16 +1,19 @@
-const faker = require('faker');
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('robinhood', 'root', '', {
-  host: 'localhost',
-  dialect: 'mysql'
-});
 
+const sequelize = new Sequelize('fec', 'root', 'password', {
+  host: 'fec.cbc6y6elvotl.us-east-1.rds.amazonaws.com',
+  port: 3306,
+  dialect: 'mysql',
+  dialectOptions: {
+    ssl: 'Amazon RDS'
+  },
+});
 sequelize
   .authenticate()
   .then(() => {
     console.log('Connection has been established successfully.');
   })
-  .catch(err => {
+  .catch((err) => {
     console.error('Unable to connect to the database:', err);
   });
 
@@ -18,7 +21,7 @@ const About = sequelize.define('about', {
   id: {
     type: Sequelize.INTEGER,
     primaryKey: true,
-    autoIncrement: true
+    autoIncrement: true,
   },
   description: Sequelize.STRING(2000),
   minimized: Sequelize.STRING(),
@@ -35,7 +38,7 @@ const About = sequelize.define('about', {
   openPrice: Sequelize.STRING,
   volume: Sequelize.STRING,
   weekHigh: Sequelize.STRING,
-  weekLow: Sequelize.STRING
+  weekLow: Sequelize.STRING,
 })
 
 const News = sequelize.define('news', {
@@ -45,12 +48,10 @@ const News = sequelize.define('news', {
   views: Sequelize.INTEGER,
   description: Sequelize.STRING(2000),
   about_id: Sequelize.INTEGER,
-  hour: Sequelize.STRING
+  hour: Sequelize.STRING,
 })
 
 sequelize.sync();
-
-
 
 
 exports.About = About;

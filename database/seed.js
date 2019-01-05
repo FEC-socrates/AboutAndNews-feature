@@ -2,26 +2,26 @@ const faker = require('faker');
 const db = require('../database/index.js');
 
 
-var employees = 5500;
-var founded = 1997;
-var marketCap = 113.64;
-var priceEarnings = 88.31
-var avgVolume = 11.11;
-var highToday = 161.91;
-var lowToday = 120.25;
-var openPrice = 220.94;
-var volume = 2.91;
-var weekHigh = 401.25;
-var weekLow = 166.36;
+let employees = 5500;
+let founded = 1997;
+let marketCap = 113.64;
+let priceEarnings = 88.31
+let avgVolume = 11.11;
+let highToday = 161.91;
+let lowToday = 120.25;
+let openPrice = 220.94;
+let volume = 2.91;
+let weekHigh = 401.25;
+let weekLow = 166.36;
 
-function getRandomIntInclusive(min, max) {
+const getRandomIntInclusive = (min, max) =>  {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
-}
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
 
-var fakeAbout = () => {
+const fakeAbout = () => {
   for (var i = 0; i < 100; i++) {
     db.About.create({
       description: faker.lorem.paragraph() + faker.lorem.paragraph() + faker.lorem.paragraph() + faker.lorem.paragraph() + faker.lorem.paragraph(),

@@ -1,9 +1,13 @@
 const express = require('express');
+
 const app = express();
-const port = 8080;
-const db = require('../database/index.js');
+const port = process.env.PORT || 8081;
 const bodyParser = require('body-parser');
-const path = require('path');
+const db = require('../database/index.js');
+const cors = require('cors');
+
+app.use(cors());
+
 
 app.use(bodyParser.json());
 
