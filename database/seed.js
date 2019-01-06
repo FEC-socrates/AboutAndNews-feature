@@ -2,44 +2,44 @@ const faker = require('faker');
 const db = require('../database/index.js');
 
 
-var employees = 5500;
-var founded = 1997;
-var marketCap = 113.64;
-var priceEarnings = 88.31
-var avgVolume = 11.11;
-var highToday = 161.91;
-var lowToday = 120.25;
-var openPrice = 220.94;
-var volume = 2.91;
-var weekHigh = 401.25;
-var weekLow = 166.36;
+let employees = 5500;
+let founded = 1997;
+let marketCap = 113.64;
+let priceEarnings = 88.31;
+let avgVolume = 11.11;
+let highToday = 161.91;
+let lowToday = 120.25;
+let openPrice = 220.94;
+let volume = 2.91;
+let weekHigh = 401.25;
+let weekLow = 166.36;
 
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+  const mininmum = Math.ceil(min);
+  const maximum = Math.floor(max);
+  return Math.floor(Math.random() * (maximum - mininmum + 1)) + mininmum;
 }
 
 
-var fakeAbout = () => {
-  for (var i = 0; i < 100; i++) {
+const fakeAbout = () => {
+  for (let i = 0; i < 100; i + 1) {
     db.About.create({
       description: faker.lorem.paragraph() + faker.lorem.paragraph() + faker.lorem.paragraph() + faker.lorem.paragraph() + faker.lorem.paragraph(),
       minimized: faker.lorem.sentence() + faker.lorem.sentence(),
       ceo: faker.name.findName(),
-      employees: employees,
-      headquarters: faker.address.city() +', ' + faker.address.state(),
-      founded: founded,
-      marketCap: marketCap,
-      priceEarnings: priceEarnings,
+      employees,
+      headquarters: `${faker.address.city()}, ${faker.address.state()}`,
+      founded,
+      marketCap,
+      priceEarnings,
       dividendYield: 0.0,
-      avgVolume: avgVolume,
-      highToday: highToday,
-      lowToday: lowToday,
-      openPrice: openPrice,
-      volume: volume,
-      weekHigh: weekHigh,
-      weekLow: weekLow
+      avgVolume,
+      highToday,
+      lowToday,
+      openPrice,
+      volume,
+      weekHigh,
+      weekLow,
     })
     employees++;
     founded++;
@@ -53,18 +53,19 @@ var fakeAbout = () => {
     weekHigh++;
     weekLow++;
   }
-}
+};
 
 fakeAbout();
 
 db.News.bulkCreate([
-  { pictureUrl: 'https://s3.amazonaws.com/fec-morgan/news9.jpeg',
+  {
+    pictureUrl: 'https://s3.amazonaws.com/fec-morgan/news9.jpeg',
     name: faker.company.companyName(),
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
-    about_id: 1
+    hour: `${getRandomIntInclusive(0, 24)}h`,
+    about_id: 1,
   },
   {
     pictureUrl: 'https://s3.amazonaws.com/fec-morgan/news8.jpeg',
@@ -72,8 +73,8 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
-    about_id: 1
+    hour: `${getRandomIntInclusive(0, 24)}h`,
+    about_id: 1,
   },
   {
     pictureUrl: 'https://s3.amazonaws.com/fec-morgan/news7.jpeg',
@@ -81,7 +82,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 1
   },
   {
@@ -90,7 +91,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 1
   },
   {
@@ -99,7 +100,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 1
   },
   {
@@ -108,7 +109,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 2
   },
   {
@@ -117,7 +118,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 2
   },
   {
@@ -126,7 +127,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 2
   },
   {
@@ -135,7 +136,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 4
   },
   {
@@ -144,7 +145,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 4
   }
   ,
@@ -154,7 +155,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 5
   },
   {
@@ -163,7 +164,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 5
   },
   {
@@ -172,7 +173,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 5
   },
   {
@@ -181,7 +182,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 5
   },
   {
@@ -190,7 +191,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 6
   },
   {
@@ -199,7 +200,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 7
   },
   {
@@ -208,7 +209,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 7
   },
   {
@@ -217,7 +218,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 7
   },
   {
@@ -226,7 +227,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 7
   },
   {
@@ -235,7 +236,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 7
   },
   {
@@ -244,7 +245,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 7
   },
   {
@@ -253,7 +254,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 8
   },
   {
@@ -262,7 +263,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 8
   },
   {
@@ -271,7 +272,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 8
   },
   {
@@ -280,7 +281,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 9
   },
   {
@@ -289,7 +290,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 9
   },
   {
@@ -298,7 +299,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 10
   },
   {
@@ -307,7 +308,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 10
   },
   {
@@ -316,7 +317,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 10
   },
   {
@@ -325,7 +326,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 10
   },
   {
@@ -334,7 +335,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 10
   },
   {
@@ -343,7 +344,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 10
   },
   {
@@ -352,7 +353,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 12
   },
   {
@@ -361,7 +362,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 12
   },
   {
@@ -370,7 +371,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 12
   },
   {
@@ -379,7 +380,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 13
   },
   {
@@ -388,7 +389,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 13
   },
   {
@@ -397,7 +398,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 14
   },
   {
@@ -406,7 +407,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 14
   },
   {
@@ -415,7 +416,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 15
   },
   {
@@ -424,7 +425,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 15
   },
   {
@@ -433,7 +434,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 15
   },
   {
@@ -442,7 +443,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 15
   },
   {
@@ -451,7 +452,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 16
   },
   {
@@ -460,7 +461,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 100
   },
   {
@@ -469,7 +470,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 16
   },
   {
@@ -478,7 +479,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 99
   },
   {
@@ -487,7 +488,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 99
   },
   {
@@ -496,7 +497,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 17
   },
   {
@@ -505,7 +506,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 17
   },
   {
@@ -514,7 +515,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 17
   },
   {
@@ -523,7 +524,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 18
   },
   {
@@ -532,7 +533,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 98
   },
   {
@@ -541,7 +542,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 98
   },
   {
@@ -550,7 +551,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 18
   },
   {
@@ -559,7 +560,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 97
   },
   {
@@ -568,7 +569,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 97
   },
   {
@@ -577,7 +578,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 19
   },
   {
@@ -586,7 +587,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 19
   },
   {
@@ -595,7 +596,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 19
   },
   {
@@ -604,7 +605,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 19
   },
   {
@@ -613,7 +614,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 96
   },
   {
@@ -622,7 +623,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 96
   },
   {
@@ -631,7 +632,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 20
   },
   {
@@ -640,7 +641,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 20
   },
   {
@@ -649,7 +650,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 21
   },
   {
@@ -658,7 +659,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 21
   },
   {
@@ -667,7 +668,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 21
   },
   {
@@ -676,7 +677,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 22
   },
   {
@@ -685,7 +686,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 24
   },
   {
@@ -694,7 +695,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 24
   },
   {
@@ -703,7 +704,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 24
   },
   {
@@ -712,7 +713,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 25
   },
   {
@@ -721,7 +722,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 25
   },
   {
@@ -730,7 +731,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 25
   },
   {
@@ -739,7 +740,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 26
   },
   {
@@ -748,7 +749,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 26
   },
   {
@@ -757,7 +758,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 26
   },
   {
@@ -766,7 +767,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 27
   },
   {
@@ -775,7 +776,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 27
   },
   {
@@ -784,7 +785,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 27
   },
   {
@@ -793,7 +794,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 28
   },
   {
@@ -802,7 +803,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 28
   },
   {
@@ -811,7 +812,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 28
   },
   {
@@ -820,7 +821,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 29
   },
   {
@@ -829,7 +830,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 29
   },
   {
@@ -838,7 +839,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 95
   },
   {
@@ -847,7 +848,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 95
   },
   {
@@ -856,7 +857,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 30
   },
   {
@@ -865,7 +866,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 30
   },
   {
@@ -874,7 +875,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 30
   },
   {
@@ -883,7 +884,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 93
   },
   {
@@ -892,7 +893,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 93
   },
   {
@@ -901,7 +902,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 31
   },
   {
@@ -910,7 +911,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 31
   },
   {
@@ -919,7 +920,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 32
   },
   {
@@ -928,7 +929,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 32
   },
   {
@@ -937,7 +938,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 32
   },
   {
@@ -946,7 +947,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 33
   },
   {
@@ -955,7 +956,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 33
   },
   {
@@ -964,7 +965,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 92
   },
   {
@@ -973,7 +974,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 34
   },
   {
@@ -982,7 +983,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 34
   },
   {
@@ -991,7 +992,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 92
   },
   {
@@ -1000,7 +1001,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 92
   },
   {
@@ -1009,7 +1010,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 35
   },
   {
@@ -1018,7 +1019,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 90
   },
   {
@@ -1027,7 +1028,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 90
   },
   {
@@ -1036,7 +1037,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 35
   },
   {
@@ -1045,7 +1046,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 35
   },
   {
@@ -1054,7 +1055,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 89
   },
   {
@@ -1063,7 +1064,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 89
   },
   {
@@ -1072,7 +1073,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 36
   },
   {
@@ -1081,7 +1082,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 36
   },
   {
@@ -1090,7 +1091,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 37
   },
   {
@@ -1099,7 +1100,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 38
   },
   {
@@ -1108,7 +1109,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 39
   },
   {
@@ -1117,7 +1118,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 39
   },
   {
@@ -1126,7 +1127,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 39
   },
   {
@@ -1135,7 +1136,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 87
   },
   {
@@ -1144,7 +1145,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 40
   },
   {
@@ -1153,7 +1154,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 40
   },
   {
@@ -1162,7 +1163,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 86
   },
   {
@@ -1171,7 +1172,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 86
   },
   {
@@ -1180,7 +1181,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 41
   },
   {
@@ -1189,7 +1190,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 42
   },
   {
@@ -1198,7 +1199,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 42
   },
   {
@@ -1207,7 +1208,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 85
   },
   {
@@ -1216,7 +1217,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 85
   },
   {
@@ -1225,7 +1226,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 43
   },
   {
@@ -1234,7 +1235,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 43
   },
   {
@@ -1243,7 +1244,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 44
   },
   {
@@ -1252,7 +1253,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 44
   },
   {
@@ -1261,7 +1262,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 45
   },
   {
@@ -1270,7 +1271,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 46
   },
   {
@@ -1279,7 +1280,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 46
   },
   {
@@ -1288,7 +1289,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 46
   },
   {
@@ -1297,7 +1298,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 47
   },
   {
@@ -1306,7 +1307,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 47
   },
   {
@@ -1315,7 +1316,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 48
   },
   {
@@ -1324,7 +1325,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 48
   },
   {
@@ -1333,7 +1334,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 48
   },
   {
@@ -1342,7 +1343,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 84
   },
   {
@@ -1351,7 +1352,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 84
   },
   {
@@ -1360,7 +1361,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 49
   },
   {
@@ -1369,7 +1370,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 49
   },
   {
@@ -1378,7 +1379,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 83
   },
   {
@@ -1387,7 +1388,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 83
   },
   {
@@ -1396,7 +1397,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 50
   },
   {
@@ -1405,7 +1406,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 50
   },
   {
@@ -1414,7 +1415,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 50
   },
   {
@@ -1423,7 +1424,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 51
   },
   {
@@ -1432,7 +1433,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 51
   },
   {
@@ -1441,7 +1442,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 81
   },
   {
@@ -1450,7 +1451,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 81
   },
   {
@@ -1459,7 +1460,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 81
   },
   {
@@ -1468,7 +1469,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 82
   },
   {
@@ -1477,7 +1478,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 81
   },
   {
@@ -1486,7 +1487,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 52
   },
   {
@@ -1495,7 +1496,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 52
   },
   {
@@ -1504,7 +1505,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 53
   },
   {
@@ -1513,7 +1514,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 53
   },
   {
@@ -1522,7 +1523,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 53
   },
   {
@@ -1531,7 +1532,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 53
   },
   {
@@ -1540,7 +1541,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 54
   },
   {
@@ -1549,7 +1550,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 55
   },
   {
@@ -1558,7 +1559,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 56
   },
   {
@@ -1567,7 +1568,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 57
   },
   {
@@ -1576,7 +1577,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 57
   },
   {
@@ -1585,7 +1586,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 58
   },
   {
@@ -1594,7 +1595,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 58
   },
   {
@@ -1603,7 +1604,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 58
   },
   {
@@ -1612,7 +1613,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 59
   },
   {
@@ -1621,7 +1622,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 59
   },
   {
@@ -1630,7 +1631,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 60
   },
   {
@@ -1639,7 +1640,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 60
   },
   {
@@ -1648,7 +1649,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 60
   },
   {
@@ -1657,7 +1658,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 61
   },
   {
@@ -1666,7 +1667,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 62
   },
   {
@@ -1675,7 +1676,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 62
   },
   {
@@ -1684,7 +1685,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 63
   },
   {
@@ -1693,7 +1694,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 64
   },
   {
@@ -1702,7 +1703,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 65
   },
   {
@@ -1711,7 +1712,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 67
   },
   {
@@ -1720,7 +1721,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 69
   },
   {
@@ -1729,7 +1730,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 69
   },
   {
@@ -1738,7 +1739,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 69
   },
   {
@@ -1747,7 +1748,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 71
   },
   {
@@ -1756,7 +1757,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 72
   },
   {
@@ -1765,7 +1766,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 74
   },
   {
@@ -1774,7 +1775,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 75
   },
   {
@@ -1783,7 +1784,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 75
   },
   {
@@ -1792,7 +1793,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 75
   },
   {
@@ -1801,7 +1802,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 76
   },
   {
@@ -1810,7 +1811,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 76
   },
   {
@@ -1819,7 +1820,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 76
   },
   {
@@ -1828,7 +1829,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 77
   },
   {
@@ -1837,7 +1838,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 78
   },
   {
@@ -1846,7 +1847,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 79
   },
   {
@@ -1855,7 +1856,7 @@ db.News.bulkCreate([
     title: faker.lorem.sentence(),
     views: faker.random.number(),
     description: faker.lorem.sentence(),
-    hour: getRandomIntInclusive(0, 24) + 'h',
+    hour: `${getRandomIntInclusive(0, 24)}h`,
     about_id: 80
   }
 ])

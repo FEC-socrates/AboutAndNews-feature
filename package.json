@@ -11,14 +11,18 @@
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch",
     "seed": "node database/seed.js",
-    "database": "mysql -u root < schema.sql",
+    "database": "mysql -u root -p < schema.sql",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "jest": {
-    "setupFiles": ["./tests/jestsetup.js"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "setupFiles": [
+      "./tests/jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
@@ -29,7 +33,6 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
-    "Faker": "^0.7.2",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.0-beta.6",
     "body-parser": "^1.18.3",

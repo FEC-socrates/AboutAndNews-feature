@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import DescriptionInfoList from './descriptionInfoList.jsx';
-import axios from 'axios';
 
-const Show = styled.a `
+const Show = styled.a`
   color: #21ce99;
   font-size: 13px;
   font-weight: 500;
@@ -38,24 +37,24 @@ class Description extends React.Component {
         <div>
           {this.state.open ?
             <div>
-            <div className="about">
-              {this.props.about.description}
-              <Show onClick={this.handleClick}> Read Less</Show>
+              <div className="about">
+                {this.props.about.description}
+                <Show onClick={this.handleClick}> Read Less</Show>
               </div>
-            </div>  :
+            </div> :
             <div>
-            <div className="about">
-              {this.props.minimized}
-              <Show onClick={this.handleClick}> Read More</Show>
+              <div className="about">
+                {this.props.minimized}
+                <Show onClick={this.handleClick}> Read More</Show>
               </div>
             </div>
           }
         </div>
-          <DescriptionInfoList
+        <DescriptionInfoList
           open={this.props.open}
           handleClick={this.handleInfoClick}
           data={this.props.about}
-          />
+        />
       </div>
     )
   }

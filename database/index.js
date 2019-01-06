@@ -1,8 +1,8 @@
-const faker = require('faker');
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('robinhood', 'root', '', {
+
+const sequelize = new Sequelize('robinhood', 'root', 'password', {
   host: 'localhost',
-  dialect: 'mysql'
+  dialect: 'mysql',
 });
 
 sequelize
@@ -10,7 +10,7 @@ sequelize
   .then(() => {
     console.log('Connection has been established successfully.');
   })
-  .catch(err => {
+  .catch((err) => {
     console.error('Unable to connect to the database:', err);
   });
 
@@ -18,7 +18,7 @@ const About = sequelize.define('about', {
   id: {
     type: Sequelize.INTEGER,
     primaryKey: true,
-    autoIncrement: true
+    autoIncrement: true,
   },
   description: Sequelize.STRING(2000),
   minimized: Sequelize.STRING(),
@@ -35,7 +35,7 @@ const About = sequelize.define('about', {
   openPrice: Sequelize.STRING,
   volume: Sequelize.STRING,
   weekHigh: Sequelize.STRING,
-  weekLow: Sequelize.STRING
+  weekLow: Sequelize.STRING,
 })
 
 const News = sequelize.define('news', {
@@ -45,12 +45,10 @@ const News = sequelize.define('news', {
   views: Sequelize.INTEGER,
   description: Sequelize.STRING(2000),
   about_id: Sequelize.INTEGER,
-  hour: Sequelize.STRING
+  hour: Sequelize.STRING,
 })
 
 sequelize.sync();
-
-
 
 
 exports.About = About;

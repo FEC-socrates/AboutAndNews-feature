@@ -31,14 +31,14 @@ class News extends React.Component {
   handleNewsClick(e) {
     var newNews = this.state.news;
     for (var i = 0; i < newNews.length; i++) {
-      if(e.target.innerHTML === newNews[i].title || e.target.innerHTML === newNews[i].name || e.target.innerHTML === newNews[i].description) {
+      if (e.target.innerHTML === newNews[i].title || e.target.innerHTML === newNews[i].name || e.target.innerHTML === newNews[i].description) {
         newNews[i].views = Number(newNews[i].views) + 1;
         axios.put("/save", newNews[i])
           .then(response => {
             console.log('saved succesfully');
           });
-        }
       }
+    }
     this.setState({
       news: newNews
     });
@@ -64,7 +64,7 @@ class News extends React.Component {
       }
     })
     var items2 = []
-    for (var i = 0; i< items.length; i++) {
+    for (var i = 0; i < items.length; i++) {
       if (items[i] !== undefined) {
         items2.push(items[i]);
       }
@@ -76,9 +76,9 @@ class News extends React.Component {
       >
         <div>
           {items2.map((item, index) => {
-            return <NewsList data={item} key={index}  handleHover1={this.handleHover1}
+            return <NewsList data={item} key={index} handleHover1={this.handleHover1}
               handleHover2={this.handleHover2}
-              hover={this.state.hover}/>
+              hover={this.state.hover} />
           })}
         </div>
       </div>

@@ -9,8 +9,8 @@ const CeoName = styled.div`
 const DescriptionInfoList = (props) => {
   return (
     <div>
-    {props.open === false ?
-      <div className="info">
+      {props.open === false ?
+        <div className="info">
           <div className="infoItem">
             <h3>CEO</h3>
             <CeoName onClick={() => (console.log('clicked'))}>{props.data.ceo}</CeoName>
